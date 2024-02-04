@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Healthy Bites - Recipes Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
 
   <body>
-
-    <nav class="navbar navbar-light bg-white  navbar-expand-md">
+    <!-- Navbar Content -->
+    <nav class="navbar navbar-light bg-white navbar-expand-md border-bottom border-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src=" https://dummyimage.com/102x30/007bff/ffffff?text=logo"
-            height="30" alt="image">
+          <img
+            src=" https://dummyimage.com/102x30/007bff/ffffff?text=logo"
+            height="30"
+            alt="image"
+          />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav3" aria-controls="navbarNav3"
-          aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav3"
+          aria-controls="navbarNav3"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav3">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span
-                  class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="recipes.html">Recipes</a>
@@ -50,86 +69,149 @@
               <a class="btn btn-outline-dark ms-md-3" href="#">Dummy Button</a>
             </li>
           </ul>
-
         </div>
       </div>
     </nav>
-    <section class="pt-4 pb-3 mt-0 align-items-center d-flex bg-light"
-      style="background-image: url(&quot;https://images.unsplash.com/photo-1517659649778-bae24b8c2e26?ixlib=rb-0.3.5&amp;s=6c3524e0ea8d0107f85384392d779467&amp;auto=format&amp;fit=crop&amp;w=1960&amp;q=80&quot;); background-size: cover; min-height: 75vh;">
-      <div class="container " style="">
-        <div class="row mt-auto">
-          <div class="col-lg-8 col-sm-12 text-center mx-auto">
-            <h1
-              class="display-5 font-weight-bold text-uppercase text-light mb-3">
-              Welcome</h1>
-            <p class="lead text-light mb-5">Donec sed odio dui. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-9 col-md-8 col-sm-12 mx-auto text-center">
-            <form class="form-noborder">
-              <div class="row mb-5">
-                <div class="col-lg-6 col-sm-12 ">
-                  <input class="form-control  " placeholder="What carves you today?"
-                    type="text">
-                </div>
-                <div class="col-lg-3 col-sm-12 form-group">
-                  <select class="form-select form-control-lg">
-                    <option> Dietary options </option>
-                    <option> Gluten free </option>
-                    <option> Vegetarian </option>
-                    <option> Vegan </option>
-                    <option> Paleo </option>
-                    <option> Nut allergies </option>
-                    <option> Fish and shellfish allergies </option>
-                  </select>
-                </div>
-                <div class="col-lg-3 col-sm-12 form-group">
-                  <button class="btn btn-primary w-100 form-control-lg"
-                    type="submit">Search</button>
-                </div>
+
+
+
+    <!-- Hero/Recipe Info Section -->
+    <section class="container mb-5 pt-4 pb-3 ">
+      <div class="row mb-2 ">
+        <div class="col-md-12 ">
+          <div
+            class="shadow-lg row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-white"
+          >
+            <div class="col p-4 d-flex flex-column position-static ">
+              <strong class="d-inline-block mb-2  ms-3 me-3 text-primary"
+                >HealthyBites</strong
+              >
+              <h3 class="mb-4">
+                <i class="fa-solid fa-bowl-food pe-1 text-primary"></i>Recipe Name
+              </h3>
+              <div class="mb-1 ms-3 me-3 prep-time" id="prep">
+                <i class="fa-solid fa-clock pe-1 text-primary"></i>Preperation Time:
               </div>
-            </form>
-            <p class="small text-light">Donec sed odio dui. Cras justo odio,
-              dapibus ac facilisis in.</p>
-            <ul class="list-inline my-5">
-              <li class="list-inline-item">
-                <a class="h4 text-muted p-2" href="#">
-                  <i class="fab text-light fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="h4 text-muted p-2" href="#">
-                  <i class="fab text-light fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="h4 text-muted p-2" href="#">
-                  <i class="fab text-light fa-dribbble"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="h4 text-muted p-2" href="#">
-                  <i class="fab text-light fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
+              <div class="mb-1 ms-3 me-3 cook-time" id="cook">
+                <i class="fa-solid fa-temperature-high pe-1 text-primary"></i>Cooking time:
+              </div>
+              <div class="mb-4 ms-3 me-3  difficulty" id="skill">
+                <i class="fa-solid fa-graduation-cap pe-1 text-primary"></i>Difficulty:
+              </div>
+              <h4 class="mb-4 " id="dish-info">
+                <i class="fa-solid fa-bowl-rice pe-1 text-primary"></i>Dish Description
+              </h4>
+              <p class="card-text ms-3 me-3  dish-intro">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                dignissimos facere natus rem asperiores quidem et. Accusamus,
+                modi doloribus quisquam repellendus minus explicabo minima a,
+                temporibus quo praesentium eligendi voluptate?
+              </p>
+            </div>
+            <div class="col-auto d-lg-block">
+              <img
+                src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbGlmZW9mcGl4MDAwMDEtaW1hZ2VfMS1renhsdXd3ci5wbmc.png"
+                alt=""
+                class="img-fluid"
+                style="max-width: 500px; height: 400px; background-size: contain;"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="pt-5 pb-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8 text-center">
-            <h1> Nothing is here. </h1>
-            <p class="text-h3">This is the area where the recipe shall be presented. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veniam quaerat placeat. Odit rerum iure ab deserunt laboriosam, velit quod sint quisquam autem dolores enim veritatis dignissimos, rem expedita iste.
-            </p>
+      <!-- Hero-Second Row -->
+      <div class="row g-5 ">
+        <!-- Ingredients Side Section -->
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem">
+            <div class="p-4 mb-3 bg-light rounded shadow">
+              <h4 class="fst-italic text-center">
+                <i class="fa-solid fa-carrot pe-1 text-primary"></i>Ingredients
+              </h4>
+              <ul class="list-group">
+                <!-- This is where the ingredients will be listed, remove d-none to make them visable like on the line below-->
+                <li class="list-group-item ingredient">Test</li>
+                <li class="list-group-item ingredient">Test</li>
+                <li class="list-group-item ingredient">Test</li>
+                <li class="list-group-item ingredient">Test</li>
+                <li class="list-group-item ingredient">Test</li>
+                <li class="list-group-item ingredient d-none"></li>
+                <li class="list-group-item ingredient d-none"></li>
+                <li class="list-group-item ingredient d-none"></li>
+                <li class="list-group-item ingredient d-none"></li>
+                <li class="list-group-item ingredient d-none"></li>
+              </ul>
+            </div>
           </div>
+        </div>
+
+        <!-- Method Second Right Side Section -->
+        <div class="col-md-8 border rounded mx-auto p-2 shadow-lg bg-white">
+          <h3 class=""><i class="fa-solid fa-pen pe-2 mb-4 text-primary"></i>Method</h3>
+          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 1 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
+          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 2 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
+          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 3 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
+          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 4 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
+          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 5 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
         </div>
       </div>
     </section>
+
+    <div class="container-fluid border-top border-primary bg-white">
+      <div class="row text-center align-items-center mt-4">
+        <div class="col-12 col-lg-2 text-lg-start">
+          <img alt="image"
+            src=" https://dummyimage.com/102x40/007bff/ffffff?text=L O G O"
+            height="40">
+        </div>
+        <div class="col mt-4 mt-lg-0 text-center">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recipes.html">Recipes</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="#">Privacy Policy</a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
+          <a href="#">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>&nbsp;&nbsp;
+          <a href="#">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>&nbsp;&nbsp;
+          <a href="#">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>&nbsp;&nbsp;
+          <a href="#">
+            <i class="fab fa-pinterest" aria-hidden="true"></i>
+          </a>&nbsp;&nbsp;
+          <a href="#">
+            <i class="fab fa-google" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col text-center">
+          © 2024 Healthy Bites. All Rights Reserved
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap Js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
-    
