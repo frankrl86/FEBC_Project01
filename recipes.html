@@ -87,25 +87,22 @@
                 >HealthyBites</strong
               >
               <h3 class="mb-4">
-                <i class="fa-solid fa-bowl-food pe-1 text-primary"></i>Recipe Name
+                <i class="fa-solid fa-bowl-food pe-1 text-primary" id="receipeName"></i>
               </h3>
-              <div class="mb-1 ms-3 me-3 prep-time" id="prep">
-                <i class="fa-solid fa-clock pe-1 text-primary"></i>Preperation Time:
-              </div>
+              <!-- <div class="mb-1 ms-3 me-3 prep-time" id="prep">
+                <i class="fa-solid fa-clock pe-1 text-primary" ></i>Preperation Time:
+              </div> -->
               <div class="mb-1 ms-3 me-3 cook-time" id="cook">
-                <i class="fa-solid fa-temperature-high pe-1 text-primary"></i>Cooking time:
+                <i class="fa-solid fa-temperature-high pe-1 text-primary" id="cookingTime"></i>
               </div>
               <div class="mb-4 ms-3 me-3  difficulty" id="skill">
-                <i class="fa-solid fa-graduation-cap pe-1 text-primary"></i>Difficulty:
+                <i class="fa-solid fa-graduation-cap pe-1 text-primary" id="healthScore"></i>
               </div>
               <h4 class="mb-4 " id="dish-info">
                 <i class="fa-solid fa-bowl-rice pe-1 text-primary"></i>Dish Description
               </h4>
               <p class="card-text ms-3 me-3  dish-intro">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-                dignissimos facere natus rem asperiores quidem et. Accusamus,
-                modi doloribus quisquam repellendus minus explicabo minima a,
-                temporibus quo praesentium eligendi voluptate?
+                
               </p>
             </div>
             <div class="col-auto d-lg-block">
@@ -130,16 +127,16 @@
               </h4>
               <ul class="list-group">
                 <!-- This is where the ingredients will be listed, remove d-none to make them visable like on the line below-->
-                <li class="list-group-item ingredient">Test</li>
-                <li class="list-group-item ingredient">Test</li>
-                <li class="list-group-item ingredient">Test</li>
-                <li class="list-group-item ingredient">Test</li>
-                <li class="list-group-item ingredient">Test</li>
-                <li class="list-group-item ingredient d-none"></li>
-                <li class="list-group-item ingredient d-none"></li>
-                <li class="list-group-item ingredient d-none"></li>
-                <li class="list-group-item ingredient d-none"></li>
-                <li class="list-group-item ingredient d-none"></li>
+                <li class="list-group-item ingredient" id="Ingredient1">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient2">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient3">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient4">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient5">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient6">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient7">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient8">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient9">Test</li>
+                <li class="list-group-item ingredient" id="Ingredient10">Test</li>
               </ul>
             </div>
           </div>
@@ -148,11 +145,16 @@
         <!-- Method Second Right Side Section -->
         <div class="col-md-8 border rounded mx-auto p-2 shadow-lg bg-white">
           <h3 class=""><i class="fa-solid fa-pen pe-2 mb-4 text-primary"></i>Method</h3>
-          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 1 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
-          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 2 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
-          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 3 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
-          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 4 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
-          <p class="ms-3 me-3 recipe-steps"><span class="method">Step - 5 </span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium est, corporis officiis soluta aliquam dolore perspiciatis. Recusandae tenetur excepturi vel inventore aliquam dignissimos eligendi iste mollitia, velit cum. Unde, quae!</p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step1"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step2"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step3"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step4"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step5"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step6"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step7"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step8"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step9"></span></p>
+          <p class="ms-3 me-3 recipe-steps" ><span class="method" id="step10"></span></p>
         </div>
       </div>
     </section>
