@@ -1,21 +1,2 @@
 /*CSS will be used for overriding Bootstrap, FontAwesome etc
 Bootstrap is at 5.3.2 // FA at 6.5.1 // see docs for reference */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700;900&display=swap");
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto Slab", sans-serif !important;
-  background-image: url(/assets/images/background-recipes.jpg);
-  background-size: cover;
-}
-
-.method {
-  font-weight: 700;
-}
-
-@media(max-width) {
-  
-}
