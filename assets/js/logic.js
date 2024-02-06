@@ -1,10 +1,10 @@
 //API key
 var APIkey = "7417780eedce40de827fd7c10a61c86d"
 
-///variable for url of random recipes from spoonacular
+///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
 
-//function to fetch data from url variable
+//Function to fetch data from url variable
 fetch(url)
 .then(function (response) {
     return response.json()
@@ -13,7 +13,7 @@ fetch(url)
     console.log(url)
     console.log(data)
 
-//show image of random recipe on carousel
+//Show image of random recipe on carousel
 $("#popular-image1").attr("src", data.recipes[0].image)
 $("#popular-image2").attr("src", data.recipes[1].image)
 $("#popular-image3").attr("src", data.recipes[2].image)
@@ -23,7 +23,7 @@ $("#popular-image6").attr("src", data.recipes[5].image)
 $("#popular-image7").attr("src", data.recipes[6].image)
 $("#popular-image8").attr("src", data.recipes[7].image)
 $("#popular-image9").attr("src", data.recipes[8].image)
-//show name of random recipe on carousel
+//Show name of random recipe on carousel
 $("#popular-recipe1").text(data.recipes[0].title)
 $("#popular-recipe2").text(data.recipes[1].title)
 $("#popular-recipe3").text(data.recipes[2].title)
@@ -37,21 +37,18 @@ $("#popular-recipe9").text(data.recipes[8].title)
 
 var recipeHistory =[]
 
-//function to add data to local storage
+//Function to add data to local storage
 function addStorage(search) {
-    // if(recipeHistory.indexOf(search) !== -1) {
-    //     return;
-    // }
 recipeHistory.push(search)
 localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory))
 historyList()
 }
 
-//function to display recipe image and title
+//Function to display recipe image and title
 function recipeResults(event) {
 event.preventDefault()
 
-//variables to retrieve data from the search box and select menu
+//Variables to retrieve data from the search box and select menu
 var recipe = $(".form-control").val()
 var dietOption = $(".form-select").val()
 addStorage(recipe)
@@ -90,10 +87,86 @@ if (recipe + dietOption){
     recipeContainer.attr("style= display: none")
     containerTitle.attr("style= display: none")
 }
+
+//Variable to get the id of the first item in the data.results array
+var recipeId = data.results[0].id
+var idURL= "https://api.spoonacular.com/recipes/" + recipeId + "/information?" + "&apiKey=" + APIkey
+//Function to fetch the id data and add the text to the overview1 id in the HTML file
+fetch(idURL)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL)
+    console.log(data)
+$("#overview1").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId1 = data.results[1].id
+var idURL1= "https://api.spoonacular.com/recipes/" + recipeId1 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL1)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL1)
+    console.log(data)
+$("#overview2").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId2 = data.results[2].id
+var idURL2= "https://api.spoonacular.com/recipes/" + recipeId2 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL2)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL2)
+    console.log(data)
+$("#overview3").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId3 = data.results[3].id
+var idURL3= "https://api.spoonacular.com/recipes/" + recipeId3 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL3)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL3)
+    console.log(data)
+$("#overview4").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId4 = data.results[4].id
+var idURL4= "https://api.spoonacular.com/recipes/" + recipeId4 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL4)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL4)
+    console.log(data)
+$("#overview5").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+
+var recipeId5 = data.results[5].id
+var idURL5= "https://api.spoonacular.com/recipes/" + recipeId5 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL5)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL5)
+    console.log(data)
+$("#overview6").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
 })
 }
 $("#search-btn").on("click", recipeResults)
 
+//Function to get items from the local storage
 function getStorage() {
     var History = localStorage.getItem("recipeHistory")
     if(History) {
@@ -101,7 +174,7 @@ function getStorage() {
     }
     historyList();
 }
-
+//Function to create buttons under the recent searches section for each value in the local storage.
 function historyList() {
     $('.storage').html("")
     for(var i=0; i< recipeHistory.length; i++) {
@@ -111,7 +184,7 @@ function historyList() {
 }
 getStorage();
 
-
+//Function to retrieve the data from local storage and display it on the cards.
 function retrieveStorage(recipe, dietOption) {
 var queryURL = "https://api.spoonacular.com/recipes/complexSearch?query=" + recipe + "&diet=" + dietOption + "&apiKey=" + APIkey
 
@@ -144,15 +217,83 @@ if (recipe + dietOption){
     recipeContainer.attr("style= display: none")
     containerTitle.attr("style= display: none")
 }
+var recipeId = data.results[0].id
+var idURL= "https://api.spoonacular.com/recipes/" + recipeId + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL)
+    console.log(data)
+$("#overview1").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId1 = data.results[1].id
+var idURL1= "https://api.spoonacular.com/recipes/" + recipeId1 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL1)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL1)
+    console.log(data)
+$("#overview2").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId2 = data.results[2].id
+var idURL2= "https://api.spoonacular.com/recipes/" + recipeId2 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL2)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL2)
+    console.log(data)
+$("#overview3").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId3 = data.results[3].id
+var idURL3= "https://api.spoonacular.com/recipes/" + recipeId3 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL3)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL3)
+    console.log(data)
+$("#overview4").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+var recipeId4 = data.results[4].id
+var idURL4= "https://api.spoonacular.com/recipes/" + recipeId4 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL4)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL4)
+    console.log(data)
+$("#overview5").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
+
+var recipeId5 = data.results[5].id
+var idURL5= "https://api.spoonacular.com/recipes/" + recipeId5 + "/information?" + "&apiKey=" + APIkey
+
+fetch(idURL5)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(idURL5)
+    console.log(data)
+$("#overview6").text("Serving size: " + data.servings + ",   Ready in: " + data.readyInMinutes + " minutes")
+})
 })
 }
-
+//Data from local storage displays on the cards when the recipe button in the recent searches is clicked.
 $(document).on('click', "#search-history", function(event) {
     var recipe = event.target.textContent
     retrieveStorage(recipe)
 })
-
-
-
-
-
