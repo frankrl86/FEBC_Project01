@@ -1,2 +1,16 @@
 /*CSS will be used for overriding Bootstrap, FontAwesome etc
 Bootstrap is at 5.3.2 // FA at 6.5.1 // see docs for reference */
+
+
+.form-control {
+    font-size: 1.15rem;
+}
+
+.form-control::placeholder {
+    color: black;
+}
+
+.form-control, .form-control-lg {
+    margin-bottom: 5px;
+   
+}
