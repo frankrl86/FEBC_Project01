@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;500;700;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto Slab", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   background-size: cover;
 }
 
@@ -13,30 +14,35 @@ body {
   font-weight: 700;
 }
 
-@media (max-width= 767px) {
-}
-
 .card-background {
   background: linear-gradient(
     135deg,
-    rgba(133, 133, 134, 0.1),
-    rgba(133, 133, 133, 0)
+    rgba(251, 251, 255, 0.5),
+    rgba(245, 245, 245, 0.5)
   );
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(248, 248, 255, 0.18);
+  border: 3px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !;
 }
 
 .nav-background {
   background: linear-gradient(
-    135deg,
-    rgba(133, 133, 134, 0.1),
-    rgba(133, 133, 133, 0)
+    100deg,
+    rgba(36, 36, 36, 0.1),
+    rgba(32, 32, 32, 0)
   );
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !;
+}
+
+.ingredient {
+  text-align: center;
+}
+
+.description-text {
+  font-size: 15px;
 }
