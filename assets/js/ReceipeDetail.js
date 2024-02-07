@@ -1,6 +1,14 @@
 //API key
-var APIkey1 = "7417780eedce40de827fd7c10a61c86d"
-var id = 324694
+
+var APIkey1 = "56ae87b1139a40e3a5c22a639aae4912"
+
+var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
+
+
+
+var id = 643362
+
+
 
 ///variable for url of random recipes from spoonacular
 var url1 = "https://api.spoonacular.com/recipes/" + id + "/information?includeNutrition=false&apiKey=" + APIkey1;
@@ -29,6 +37,11 @@ healthScore.text(" Health Score :  " + data.healthScore );
 //fetching Dish Intro
 let dishIntro = $(".dish-intro");
 dishIntro.text(data.summary);  
+
+// fetching image
+var imgSrc = $('.placeholderImage img').attr('src');
+$('.placeholderImage img').attr('src', data.image);
+
 })
 
 
@@ -71,3 +84,27 @@ for (let i =  1; i < 11; i++) {
   }
 
 })
+
+
+
+//variable for Pexels API
+
+
+fetch("https://api.pexels.com/videos/search?query=pasta",{
+  headers: {
+    Authorization: pexelsApiKey
+  }
+})
+   .then(resp => {
+     return resp.json()
+   })
+   .then(data => {
+     console.log(data)
+     console.log(data.url)
+
+     var videoSrc = $('.list-group video').attr('src');
+     $('.videokanika video').attr('src', data.video[0].url);
+
+
+   })
+
