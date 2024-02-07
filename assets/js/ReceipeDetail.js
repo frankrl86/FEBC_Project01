@@ -1,6 +1,7 @@
 //API key
-var APIkey1 = "7417780eedce40de827fd7c10a61c86d"
-var id = 324694
+var APIkey1 = "93026eaabf5e43f88000b0096607489c"
+var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
+var id = 1003464
 
 ///variable for url of random recipes from spoonacular
 var url1 = "https://api.spoonacular.com/recipes/" + id + "/information?includeNutrition=false&apiKey=" + APIkey1;
@@ -29,6 +30,11 @@ healthScore.text(" Health Score :  " + data.healthScore );
 //fetching Dish Intro
 let dishIntro = $(".dish-intro");
 dishIntro.text(data.summary);  
+
+// fetching image
+var imgSrc = $(this).attr('src');
+console.log(imgSrc);
+
 })
 
 
@@ -71,3 +77,37 @@ for (let i =  1; i < 11; i++) {
   }
 
 })
+
+
+//variable for Pexels API
+
+
+fetch("https://api.pexels.com/videos/search?query=pasta",{
+  headers: {
+    Authorization: pexelsApiKey
+  }
+})
+   .then(resp => {
+     return resp.json()
+   })
+   .then(data => {
+     console.log(data)
+   })
+// import { createClient } from 'pexels';
+
+// const client = createClient('v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC');
+
+// client.photos.show({ id: 2499611 }).then(photo => {console.log("kanika")});
+
+
+// fetch(url4)
+// .then(function (response) {
+//     return response.json();
+// })
+// .then(function (data) {
+//     console.log(data);
+//     console.log(url4);
+
+// console.log("kanika");
+
+// })
