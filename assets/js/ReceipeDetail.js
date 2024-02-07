@@ -1,8 +1,11 @@
 //API key
-var APIkey1 = "93026eaabf5e43f88000b0096607489c"
+var APIkey1 = "56ae87b1139a40e3a5c22a639aae4912"
 
 var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
-var id = 1003464
+
+
+
+var id = 643362
 
 
 ///variable for url of random recipes from spoonacular
@@ -34,8 +37,8 @@ let dishIntro = $(".dish-intro");
 dishIntro.text(data.summary);  
 
 // fetching image
-var imgSrc = $(this).attr('src');
-console.log(imgSrc);
+var imgSrc = $('.placeholderImage img').attr('src');
+$('.placeholderImage img').attr('src', data.image);
 
 })
 
@@ -95,23 +98,11 @@ fetch("https://api.pexels.com/videos/search?query=pasta",{
    })
    .then(data => {
      console.log(data)
+     console.log(data.url)
+
+     var videoSrc = $('.list-group video').attr('src');
+     $('.videokanika video').attr('src', data.video[0].url);
+
+
    })
-// import { createClient } from 'pexels';
-
-// const client = createClient('v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC');
-
-// client.photos.show({ id: 2499611 }).then(photo => {console.log("kanika")});
-
-
-// fetch(url4)
-// .then(function (response) {
-//     return response.json();
-// })
-// .then(function (data) {
-//     console.log(data);
-//     console.log(url4);
-
-// console.log("kanika");
-
-// })
 

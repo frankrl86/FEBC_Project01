@@ -1,5 +1,5 @@
 //API key
-var APIkey = "93026eaabf5e43f88000b0096607489c"
+var APIkey = "56ae87b1139a40e3a5c22a639aae4912"
 
 ///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
@@ -34,6 +34,10 @@ $("#popular-recipe7").text(data.recipes[6].title)
 $("#popular-recipe8").text(data.recipes[7].title)
 $("#popular-recipe9").text(data.recipes[8].title)
 })
+
+$("#popular-image1").on("click", function (data) {
+    console.log(data.recipes[0].id)
+      })
 
 var recipeHistory =[]
 
