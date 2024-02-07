@@ -108,10 +108,11 @@
               <h4 class="fst-italic text-center">
                 <i class="fa-solid fa-carrot pe-1 text-primary "></i>Feast your eyes on
               </h4>
-              <ul class="list-group videoFood">
+              <ul class="list-group videoFood" id="videoContainer">
                 <!-- This is where the ingredients will be listed, remove d-none to make them visable like on the line below-->
                 <!-- Pexel api within here?  down below  -->
-                <video src="./assets/videos/recipevideo.mp4" class="rounded pexel-api" controls></video>
+                <div id="apiLink"></div>
+                <video src="./assets/videos/recipevideo.mp4" class="rounded pexel-api" controls autoplay muted></video>
               </ul>
             </div>
             
