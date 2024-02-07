@@ -5,6 +5,9 @@ body {
     font-family: 'Poppins', system-ui, sans-serif; 
   }
 
+.navbar {
+    --bs-navbar-padding-y: 0;
+}
 
 .form-control {
     font-size: 1.15rem;
