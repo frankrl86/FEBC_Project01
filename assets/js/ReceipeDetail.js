@@ -1,8 +1,8 @@
 //API key
-var APIkey1 = "93026eaabf5e43f88000b0096607489c"
+var APIkey1 = "a16c320abe6044bbba5a85994eba59f2"
 
 var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
-var id = 1003464
+var id = 1309259
 
 
 ///variable for url of random recipes from spoonacular
@@ -34,8 +34,8 @@ let dishIntro = $(".dish-intro");
 dishIntro.text(data.summary);  
 
 // fetching image
-var imgSrc = $(this).attr('src');
-console.log(imgSrc);
+var imgSrc = $('.placeholderImage img').attr('src');
+$('.placeholderImage img').attr('src', data.image);
 
 })
 
