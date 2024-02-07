@@ -14,7 +14,6 @@ body {
 }
 
 @media (max-width= 767px) {
-    
 }
 
 .card-background {
@@ -22,14 +21,22 @@ body {
     135deg,
     rgba(133, 133, 134, 0.1),
     rgba(133, 133, 133, 0)
-  ) ;
-  backdrop-filter: blur(100px) ;
+  );
+  backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(248, 248, 255, 0.18) ;
+  border: 1px solid rgba(248, 248, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !;
 }
 
-.placeholderImage img {
-    
+.nav-background {
+  background: linear-gradient(
+    135deg,
+    rgba(133, 133, 134, 0.1),
+    rgba(133, 133, 133, 0)
+  );
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !;
 }
