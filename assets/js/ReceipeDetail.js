@@ -1,9 +1,9 @@
 
 //API key
 
-var APIkey1 = "02b1faa01fe643289679dae42061e052"
+var APIkey1 = "7794ad11e1ae44d4a7feb9de1c258727"
 
-var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
+var pexelsApiKey = "bJB4r9XixEEj1UZujnkRhKD2fjmLan5KaFFjmBYfdRBLVWGKGaHp2XXB"
 
 
 var searchId = localStorage.getItem("currentSearch")
@@ -26,7 +26,7 @@ fetch(url1)
 
 // fetching Receipe Name
       let receipeName = $("#receipeName");
-      receipeName.text(" " + data.sourceName);
+      receipeName.text(" " + data.title);
 
 // fetching Cooking Time
 let cookingTime = $("#cookingTime");
@@ -38,11 +38,11 @@ healthScore.text(" Health Score :  " + data.healthScore );
 
 //fetching Dish Intro
 let dishIntro = $(".dish-intro");
-dishIntro.text(data.summary);  
+dishIntro.html(data.summary);  
 
 // fetching image
-var imgSrc = $('.placeholderImage img').attr('src');
-$('.placeholderImage img').attr('src', data.image);
+// var imgSrc = $('.placeholderImage img').attr('src');
+$('.foodImage img').attr('src', data.image);
 
 })
 
@@ -102,10 +102,10 @@ fetch("https://api.pexels.com/videos/search?query=pasta",{
    })
    .then(data => {
      console.log(data)
-     console.log(data.url)
+     console.log(data.videos[0].url)
 
-     var videoSrc = $('.list-group video').attr('src');
-     $('.videokanika video').attr('src', data.video[0].url);
+    //  var videoSrc = $('.list-group video').attr('src');
+     $('.videoFood video').attr('src', data.videos[0].url);
 
 
    })
