@@ -1,5 +1,5 @@
 //API key
-var APIkey = "56ae87b1139a40e3a5c22a639aae4912"
+var APIkey = "02b1faa01fe643289679dae42061e052"
 
 ///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
@@ -35,9 +35,6 @@ $("#popular-recipe8").text(data.recipes[7].title)
 $("#popular-recipe9").text(data.recipes[8].title)
 })
 
-$("#popular-image1").on("click", function (data) {
-    console.log(data.recipes[0].id)
-      })
 
 var recipeHistory =[]
 
@@ -82,11 +79,47 @@ if (recipe + dietOption){
     $("#image6").attr("src", data.results[5].image)
 //Show the recipe name
     $("#recipe1").text(data.results[0].title)
+    $("#recipe1").attr("data-receipeId", data.results[0].id)
+    $("#recipe1").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#recipe2").text(data.results[1].title)
+    $("#recipe2").attr("data-receipeId", data.results[1].id)
+    $("#recipe2").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#recipe3").text(data.results[2].title)
+    $("#recipe3").attr("data-receipeId", data.results[2].id)
+    $("#recipe3").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#recipe4").text(data.results[3].title)
+    $("#recipe4").attr("data-receipeId", data.results[3].id)
+    $("#recipe4").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#recipe5").text(data.results[4].title)
+    $("#recipe5").attr("data-receipeId", data.results[4].id)
+    $("#recipe5").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#recipe6").text(data.results[5].title)
+    $("#recipe6").attr("data-receipeId", data.results[5].id)
+    $("#recipe6").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
 }else{
     recipeContainer.attr("style= display: none")
     containerTitle.attr("style= display: none")
@@ -301,3 +334,4 @@ $(document).on('click', "#search-history", function(event) {
     var recipe = event.target.textContent
     retrieveStorage(recipe)
 })
+

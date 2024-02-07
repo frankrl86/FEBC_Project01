@@ -1,12 +1,14 @@
+
 //API key
 
-var APIkey1 = "56ae87b1139a40e3a5c22a639aae4912"
+var APIkey1 = "02b1faa01fe643289679dae42061e052"
 
 var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
 
 
-
-var id = 643362
+var searchId = localStorage.getItem("currentSearch")
+console.log(searchId);
+var id = searchId 
 
 
 
