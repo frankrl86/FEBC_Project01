@@ -14,9 +14,6 @@ body {
   font-weight: 700;
 }
 
-@media (max-width= 767px) {
-}
-
 .card-background {
   background: linear-gradient(
     135deg,
