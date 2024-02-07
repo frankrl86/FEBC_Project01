@@ -1,7 +1,9 @@
 //API key
 var APIkey1 = "93026eaabf5e43f88000b0096607489c"
+
 var pexelsApiKey = "v1GCWAKdKe6og81WZLRXxlq7xXOuR5vPdBDtfd6TnZG7byAmRTu49quC"
 var id = 1003464
+
 
 ///variable for url of random recipes from spoonacular
 var url1 = "https://api.spoonacular.com/recipes/" + id + "/information?includeNutrition=false&apiKey=" + APIkey1;
@@ -79,6 +81,7 @@ for (let i =  1; i < 11; i++) {
 })
 
 
+
 //variable for Pexels API
 
 
@@ -111,3 +114,4 @@ fetch("https://api.pexels.com/videos/search?query=pasta",{
 // console.log("kanika");
 
 // })
+

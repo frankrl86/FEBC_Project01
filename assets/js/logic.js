@@ -1,5 +1,5 @@
 //API key
-var APIkey = "7417780eedce40de827fd7c10a61c86d"
+var APIkey = "93026eaabf5e43f88000b0096607489c"
 
 ///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
