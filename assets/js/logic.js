@@ -1,5 +1,7 @@
 //API key
-/*var APIkey = "7794ad11e1ae44d4a7feb9de1c258727"
+
+var APIkey = "dc319d8c1b5644728065120736e7b5fe"
+
 
 ///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
@@ -72,11 +74,47 @@ if (recipe + dietOption){
     containerTitle.removeAttribute('style')
 //Show image of the recipe
     $("#image1").attr("src", data.results[0].image)
+    $("#image1").attr("data-receipeId", data.results[0].id)
+    $("#image1").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#image2").attr("src", data.results[1].image)
+    $("#image2").attr("data-receipeId", data.results[1].id)
+    $("#image2").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#image3").attr("src", data.results[2].image)
+    $("#image3").attr("data-receipeId", data.results[2].id)
+    $("#image3").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#image4").attr("src", data.results[3].image)
+    $("#image4").attr("data-receipeId", data.results[3].id)
+    $("#image4").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#image5").attr("src", data.results[4].image)
+    $("#image5").attr("data-receipeId", data.results[4].id)
+    $("#image5").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
     $("#image6").attr("src", data.results[5].image)
+    $("#image6").attr("data-receipeId", data.results[5].id)
+    $("#image6").on("click", function (e) {
+        console.log(e.target.getAttribute("data-receipeId"));
+        localStorage.setItem("currentSearch",e.target.getAttribute("data-receipeId"))
+        document.location.replace("./recipes.html")
+    })
 //Show the recipe name
     $("#recipe1").text(data.results[0].title)
     $("#recipe1").attr("data-receipeId", data.results[0].id)
