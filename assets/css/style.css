@@ -14,13 +14,12 @@ body {
 .nav-link:hover {
     border: 1px solid black;
     border-radius: 10px;
-
 }
 
-.display-5, .lead {
+.fheader, .hlead {
     color: white;
     text-shadow:  2px  2px  4px rgba(0,  0,  0,  0.5),  0  0  2px rgba(0,  0,  0,  0.5);
-      } 
+          } 
 
 .form-control, .form-select {
     font-size: 1.1rem;
