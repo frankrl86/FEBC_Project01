@@ -40,6 +40,12 @@ $("#popular-recipe9").text(data.recipes[8].title)
 
 var recipeHistory =[]
 
+//Function to clear local storage when button is clicked
+$(".clear-storage").on('click', function(){
+    localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory.splice(0, recipeHistory.length)))
+    $(".storage").empty() 
+    })
+
 //Function to add data to local storage
 function addStorage(search) {
 recipeHistory.push(search)
@@ -253,7 +259,7 @@ function getStorage() {
 function historyList() {
     $('.storage').html("")
     for(var i=0; i< recipeHistory.length; i++) {
-    var storageButton = $('<button type="button" class="btn btn-primary btn-lg" id="search-history" style="margin-left: 10px;">').text(recipeHistory[i])
+    var storageButton = $(`<button type="button" class="btn btn-primary btn-lg" id="${recipeHistory[i]}" style="margin-left: 10px;">`).text(recipeHistory[i])
     $('.storage').append(storageButton)
     }
 }
