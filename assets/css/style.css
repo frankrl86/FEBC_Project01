@@ -12,19 +12,24 @@ body {
 }
 
 .nav-link:hover {
-border: 1px solid black;
-border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 
 }
+
+.display-5, .lead {
+    color: white;
+    text-shadow:  2px  2px  4px rgba(0,  0,  0,  0.5),  0  0  2px rgba(0,  0,  0,  0.5);
+      } 
 
 .form-control, .form-select {
     font-size: 1.1rem;
 }
 
 .form-control::placeholder {
-    color: black;
+     color: black;
 }
 
 .form-control, .form-control-lg {
-    margin-bottom: 5px;
+     margin-bottom: 5px;
 }
