@@ -1,7 +1,7 @@
 
 //API key
 
-var APIkey1 = "7794ad11e1ae44d4a7feb9de1c258727"
+/*var APIkey1 = "7794ad11e1ae44d4a7feb9de1c258727"
 
 var pexelsApiKey = "bJB4r9XixEEj1UZujnkRhKD2fjmLan5KaFFjmBYfdRBLVWGKGaHp2XXB"
 
