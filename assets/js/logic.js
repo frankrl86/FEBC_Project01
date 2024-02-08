@@ -1,6 +1,5 @@
 //API key
-
-var APIkey = "88da055336054273bc116ef6b63f0b84"
+var APIkey = "dc319d8c1b5644728065120736e7b5fe"
 
 
 ///Variable for url of random recipes from spoonacular
