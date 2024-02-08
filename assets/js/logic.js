@@ -40,8 +40,17 @@ $("#popular-recipe9").text(data.recipes[8].title)
 
 var recipeHistory =[]
 
+//Function to clear local storage when button is clicked
+$(".clear-storage").on('click', function(){
+    localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory.splice(0, recipeHistory.length)))
+    $(".storage").empty() 
+    })
+
 //Function to add data to local storage
 function addStorage(search) {
+    if(recipeHistory.indexOf(search) !== -1) {
+        return;
+    }
 recipeHistory.push(search)
 localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory))
 historyList()
