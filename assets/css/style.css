@@ -11,8 +11,14 @@ body {
     /*--bs-navbar-padding-y: 0;*/
 }
 
-.form-control {
-    font-size: 1.15rem;
+.nav-link:hover {
+border: 1px solid black;
+border-radius: 10px;
+
+}
+
+.form-control, .form-select {
+    font-size: 1.1rem;
 }
 
 .form-control::placeholder {
