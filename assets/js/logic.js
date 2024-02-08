@@ -1,6 +1,7 @@
 //API key
 var APIkey = "dc319d8c1b5644728065120736e7b5fe"
 
+
 ///Variable for url of random recipes from spoonacular
 var url= "https://api.spoonacular.com/recipes/random?number=9" + "&apiKey=" + APIkey
 
@@ -38,8 +39,17 @@ $("#popular-recipe9").text(data.recipes[8].title)
 
 var recipeHistory =[]
 
+//Function to clear local storage when button is clicked
+$(".clear-storage").on('click', function(){
+    localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory.splice(0, recipeHistory.length)))
+    $(".storage").empty() 
+    })
+
 //Function to add data to local storage
 function addStorage(search) {
+    if(recipeHistory.indexOf(search) !== -1) {
+        return;
+    }
 recipeHistory.push(search)
 localStorage.setItem("recipeHistory", JSON.stringify(recipeHistory))
 historyList()
