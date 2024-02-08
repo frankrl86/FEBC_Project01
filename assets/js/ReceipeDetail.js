@@ -1,7 +1,7 @@
 
 //API key
 
-var APIkey1 = "422b7b70e38d4c898fec00ae24d6c904"
+var APIkey1 = "dc319d8c1b5644728065120736e7b5fe"
 
 var pexelsApiKey = "bJB4r9XixEEj1UZujnkRhKD2fjmLan5KaFFjmBYfdRBLVWGKGaHp2XXB"
 
@@ -27,7 +27,7 @@ fetch(url1)
 // fetching Receipe Name
       let receipeName = $("#receipeName");
       receipeName.text(" " + data.title);
-      // callPexel(data.title)
+      callPexel(data.title)
 
 // fetching Cooking Time
 let cookingTime = $("#cookingTime");
@@ -92,10 +92,10 @@ for (let i =  1; i < 11; i++) {
 
 
 //variable for Pexels API
-// function callPexel(pexelSearch) {
-// console.log(pexelSearch);
+function callPexel(pexelSearch) {
+console.log(pexelSearch);
 // console.log("https://api.pexels.com/videos/search?query=" + pexelSearch.split(" ").join(""));
-fetch("https://api.pexels.com/videos/search?query=pasta"   ,{
+fetch("https://api.pexels.com/videos/search?query=" + pexelSearch   ,{
   headers: {
     Authorization: pexelsApiKey
   }
@@ -106,7 +106,7 @@ fetch("https://api.pexels.com/videos/search?query=pasta"   ,{
    .then(data => {
      console.log(data)
      console.log(data.videos[0].url)
-     $('#apiLink').text(data.videos[0].url)
+     $('#apiLink a').attr('href', data.videos[0].url)
 
     //  var videoSrc = $('.list-group video').attr('src');
     //  $('.videoFood video').attr('src', data.videos[0].url).autoPlayVideo.play();
@@ -114,5 +114,5 @@ fetch("https://api.pexels.com/videos/search?query=pasta"   ,{
 
 
    })
-  // }
+  }
 
