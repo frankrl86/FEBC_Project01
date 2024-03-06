@@ -2,6 +2,7 @@
 
 ## Project Description:
 
+- Live Application: https://frankrl86.github.io/FEBC_Project01/
 - An app that enables the user to search for a list of recipes based on their dietary requirements. Each recipe will have a video tutorial demonstrating how to make the dish.
 
 ## APIs to be used:
